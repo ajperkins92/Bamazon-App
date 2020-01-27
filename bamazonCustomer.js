@@ -3,8 +3,10 @@ require('dotenv').config();
 const inquirer = require("inquirer");
 const mysql = require("mysql");
 require("console.table");
+var colors = require('colors');
 
-console.log("Welcome to Bamazon!");
+
+console.log("Welcome to Bamazon!".blue);
 
 var connection = mysql.createConnection({
     host: "localhost",
@@ -18,7 +20,6 @@ connection.connect(function (err) {
     if (err) {
         console.error("Error Connecting: " + err.stack);
     };
-    console.log("Bamazon Database is loaded!".blue);
     loadProducts();
 });
 
@@ -41,7 +42,7 @@ function promptCustomerForItem(inventory) {
             {
                 type: "input",
                 name: "choice",
-                message: "What is the ID of the item you would like to purchase? [Quit with Q]",
+                message: "What is the ID of the item you would like to purchase? [Quit with Q]".green,
                 validate: function (val) {
                     return !isNaN(val) || val.toLowerCase() === "q";
                 }
@@ -53,10 +54,10 @@ function promptCustomerForItem(inventory) {
             var product = checkInventory(choiceId, inventory);
 
             if (product) {
-                promptCustomerForQuanity(product);
+                promptCustomerForQuantity(product);
             }
             else {
-                console.log("\nThat item is not in the inventory.");
+                console.log("\nThat item is not in the inventory.".red);
                 loadProducts();
             };
         });
@@ -69,7 +70,7 @@ function promptCustomerForQuantity(product) {
             {
                 type: "input",
                 name: "quantity",
-                message: "How many would you like? [Quit with Q]",
+                message: "How many would you like? [Quit with Q]".green,
                 validate: function (val) {
                     return val > 0 || val.toLowerCase() === "q";
                 }
@@ -113,7 +114,7 @@ function checkInventory(choiceId, inventory) {
 // Quit function
 function checkIfShouldExit(choice) {
     if (choice.toLowerCase() === "q") {
-        console.log("Goodbye!");
+        console.log("Goodbye!".yellow);
         process.exit(0);
     }
-}
+};
