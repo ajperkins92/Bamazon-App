@@ -23,9 +23,24 @@ The first and most simple phase of the application is the Customer's interface. 
 
 The second and more robust phase of the application is the Manager's interface. Here, the manager is presented initially with a menu of options:
 
-!["Manager's view"](Images/bamazonManager-menu.view.JPG)
+!["Manager's view"](Images/bamazonManager-menu-view.JPG)
 
-The Manager can choose to view the products (derived from the same database as the Customer's view)
+The Manager can choose to view the products (derived from the same database as the Customer's view):
 
 !["Manager's view of products"](Images/bamazonManager-view-products.JPG)
 
+The Manager can choose to view products with low inventory (5 or less items):
+
+!["Manager's view of low inventory items"](/Images/bamazonManager-view-low-inventory.JPG)
+
+The Manager can choose to add to the inventory of existing items:
+
+!["Manager's option to add to item inventory count"](/Images/bamazonManager-add-to-inventory.JPG)
+
+The Manager can choose to even add new products to the department:
+
+!["Manager's optoin to add new item to department"](/Images/bamazonManager-add-new-product.JPG)
+
+Finally, once the Manager's job is done, they can select "Quit" to exit the Manager's console view:
+
+!["Manager's 'Quit' Option](/Images/bamazonManager-quit.JPG)
