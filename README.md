@@ -17,6 +17,15 @@ The second component is a Store Manager interface, whereby the amount of merchan
 ## Customer Interface Demonstration
 The first and most simple phase of the application is the Customer's interface. Here, the customer merely has to select and idem by ID and input the quantity of the item they wish to purchase.
 
-!["bamazonCustomer-view.JPG"](Images/bamazonCustomer-view.JPG)
+!["Customer's View"](Images/bamazonCustomer-view.JPG)
 
 ## Manager Interface Demonstration
+
+The second and more robust phase of the application is the Manager's interface. Here, the manager is presented initially with a menu of options:
+
+!["Manager's view"](Images/bamazonManager-menu.view.JPG)
+
+The Manager can choose to view the products (derived from the same database as the Customer's view)
+
+!["Manager's view of products"](Images/bamazonManager-view-products.JPG)
+
